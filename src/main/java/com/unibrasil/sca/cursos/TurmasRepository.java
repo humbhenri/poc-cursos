@@ -10,4 +10,5 @@ import com.unibrasil.sca.Turma;
 public interface TurmasRepository extends CrudRepository<Turma, Integer>{
 	
 	Iterable<Turma> findTurmaByProfessorUsername(@Param("username") String username);
+	
 }
