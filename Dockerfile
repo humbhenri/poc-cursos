@@ -5,8 +5,9 @@ ADD . /tmp
 WORKDIR /tmp
 ADD wait.sh /wait.sh
 RUN mvn clean package -DskipTests\
+	&& cp target/cursos-0.0.1-SNAPSHOT.jar /app.jar \
     && chmod +x /wait.sh \
 	&& apt update \
 	&& apt install netcat -y
-CMD /wait.sh && java -Xmx100M -jar -Dspring.profiles.active=docker target/cursos-0.0.1-SNAPSHOT.jar
+CMD /wait.sh && java -Xmx100M -jar -Dspring.profiles.active=docker  /app.jar
 EXPOSE 8080
