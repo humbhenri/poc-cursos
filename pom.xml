@@ -24,6 +24,27 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Dalston.SR1</spring-cloud.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-humbhenri-poc-models</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/humbhenri/poc-models</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-humbhenri-poc-models</id>
+			<name>bintray-plugins</name>
+			<url>http://dl.bintray.com/humbhenri/poc-models</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<dependencies>
 		<dependency>
@@ -55,7 +76,7 @@
 		<dependency>
         	<groupId>com.unibrasil.sca</groupId>
         	<artifactId>models</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
+        	<version>0.0.1</version>
         </dependency>
 	</dependencies>
 	<dependencyManagement>
